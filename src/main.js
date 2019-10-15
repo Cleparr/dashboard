@@ -4,10 +4,6 @@ import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
 
-import { BEmbed } from 'bootstrap-vue'
-Vue.component('b-embed', BEmbed)
-
-
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
@@ -20,4 +16,8 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+setInterval(() => {
+  window.location.reload()
+}, 10*60*1000);
 
