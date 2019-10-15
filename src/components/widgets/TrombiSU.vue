@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import { clearInterval } from 'timers';
 // Authentication Airtable
 const Airtable = require("airtable");
 
@@ -32,7 +31,7 @@ export default {
   props: {
     delay: {
       type: Number,
-      default: 30000
+      default: 30*1000
     }
   },
   data() {
@@ -52,14 +51,11 @@ export default {
   },
   async created() {
     this.images = await this.getImages();
+    this.currentIndex = parseInt(Math.random() * this.images.length)
   },
   mounted() {
     this.timerId = setInterval(() => {
-      if (this.currentIndex == this.images.length - 1) {
-        this.currentIndex = 0;
-      } else {
-        this.currentIndex++;
-      }
+      this.currentIndex = parseInt(Math.random() * this.images.length)
     }, this.delay);
   },
   beforeDestroy() {
