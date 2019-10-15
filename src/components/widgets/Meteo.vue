@@ -44,7 +44,6 @@ div.widget-container >>> .fe_container{
     max-width: auto;
     min-width: auto;
     height: auto;
-    zoom: 0.5 !important;
     background-color: white;
 }
 

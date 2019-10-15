@@ -1,11 +1,11 @@
 <template>
-  <b-container v-if="hasImages" rounded class="widget-container shadow mb-2 bg-white rounded">
+  <b-container v-if="hasImages" rounded class="widget-container shadow mb-2 p-3 bg-white rounded">
     <b-row>
       <b-col>
-        <h1 class="text-center" pa-0>{{currentImage.nom}}</h1>
+        <h1 class="text-center">{{currentImage.nom}}</h1>
       </b-col>
     </b-row>
-    <b-row align-v="start" no-gutters p-3>
+    <b-row align-v="start">
       <b-col cols="4">
         <b-img fluid-grow :src="currentImage.logo"></b-img>  
       </b-col>
@@ -96,23 +96,6 @@ export default {
 
 <style scoped>
 div.widget-container {
-  height: 200px;
-  overflow: hidden;
-}
-
-div.widget-container >>> img {
-  object-fit:contain;
-  height: 100%;
-  width: 50%;
-}
-
-h1{
-  padding: 10px
-}
-
-p{
-  font-size:70%;
-  margin:10px
 }
 
 .shadow{
