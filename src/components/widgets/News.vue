@@ -83,7 +83,7 @@ export default {
 
 <style scoped>
 div.widget-container {
-  background-color: blue;
+  overflow: hidden;
 }
 
 img {
