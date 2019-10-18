@@ -10,6 +10,7 @@
       <b-row>
         <b-col cols="7" >
           <TrombiSU/>
+          <Arrivants/>
           <Meteo/>
           <Agenda />
           <Invitation />
@@ -31,7 +32,7 @@ import Meteo from '@/components/widgets/Meteo.vue'
 import Invitation from '@/components/widgets/Invitation.vue'
 import Video from '@/components/widgets/Video.vue'
 import TrombiSU from '@/components/widgets/TrombiSU.vue'
-
+import Arrivants from '@/components/widgets/Arrivants/Arrivants.vue'
 
 export default {
   name: 'home',
@@ -42,7 +43,8 @@ export default {
     Meteo,
     Invitation,
     Video,
-    TrombiSU
+    TrombiSU,
+    Arrivants
   },
 }
 </script>

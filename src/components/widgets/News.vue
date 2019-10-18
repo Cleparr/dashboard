@@ -85,6 +85,7 @@ export default {
 <style scoped>
 div.widget-container {
   background-color: blue;
+  height: 100px;
 
 }
 
@@ -96,4 +97,5 @@ img {
 .shadow{
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
 }
+
 </style>
