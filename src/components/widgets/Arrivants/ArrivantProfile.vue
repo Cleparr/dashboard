@@ -51,6 +51,8 @@ export default {
           return "#FFEAB6";
         case "Autre":
           return "#FFDCE5";
+        case "B612":
+          return "#F82B60";
       }
 
       return "white";

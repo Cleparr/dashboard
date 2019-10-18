@@ -1,28 +1,12 @@
 <template>
   <div class="widget-container shadow mb-2 p-1 bg-white rounded">
     <b-row>
-      <b-col :cols="4">
+      <b-col v-bind:key="(currentIndex+n)" v-for="n in numberOfProfiles" :cols="12/numberOfProfiles">
         <ArrivantProfile
-          :nom="currentImage.nom"
-          :photo="currentImage.photo"
-          :entreprise="currentImage.entreprise"
-          :statut="currentImage.statut"
-        />
-      </b-col>
-      <b-col :cols="4">
-        <ArrivantProfile
-          :nom="currentImage.nom"
-          :photo="currentImage.photo"
-          :entreprise="currentImage.entreprise"
-          :statut="currentImage.statut"
-        />
-      </b-col>
-      <b-col :cols="4">
-        <ArrivantProfile
-          :nom="currentImage.nom"
-          :photo="currentImage.photo"
-          :entreprise="currentImage.entreprise"
-          :statut="currentImage.statut"
+          :nom="images[currentIndex+n].nom"
+          :photo="images[currentIndex+n].photo"
+          :entreprise="images[currentIndex+n].entreprise"
+          :statut="images[currentIndex+n].statut"
         />
       </b-col>
     </b-row>
@@ -48,7 +32,11 @@ export default {
   props: {
     delay: {
       type: Number,
-      default: 5000
+      default: 30000
+    },
+    numberOfProfiles: {
+      type: Number,
+      default: 3
     }
   },
   data() {
@@ -71,7 +59,7 @@ export default {
   },
   mounted() {
     this.timerId = setInterval(() => {
-      if (this.currentIndex == this.images.length - 1) {
+      if (this.currentIndex == this.images.length - 1 - this.numberOfProfiles) {
         this.currentIndex = 0;
       } else {
         this.currentIndex++;

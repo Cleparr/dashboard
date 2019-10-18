@@ -10,7 +10,7 @@
       <b-row>
         <b-col cols="7" >
           <TrombiSU/>
-          <Arrivants/>
+          <Arrivants :number-of-profiles="3"/>
           <Meteo/>
           <Agenda />
           <Invitation />

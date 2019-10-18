@@ -91,9 +91,6 @@ export default {
 </script>
 
 <style scoped>
-div.widget-container {
-}
-
 .shadow{
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
 }
