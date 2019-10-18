@@ -1,11 +1,10 @@
 <template>
-  <div v-if="hasImages" rounded alt="Rounded image" class="widget-container shadow mb-2 bg-white rounded">
+  <div v-if="hasImages" class="widget-container shadow mb-2 bg-white rounded">
     <b-img reponsive :src="currentImage.photo"></b-img>
   </div>
 </template>
 
 <script>
-import { clearInterval } from 'timers';
 // Authentication Airtable
 const Airtable = require("airtable");
 
@@ -85,8 +84,6 @@ export default {
 <style scoped>
 div.widget-container {
   background-color: blue;
-  height: 100px;
-
 }
 
 img {
