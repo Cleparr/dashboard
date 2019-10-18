@@ -1,11 +1,11 @@
 <template>
   <div class="home mt-1">
       <b-container fluid>
-      <!-- <b-row>
+      <b-row>
         <b-col>
           <News/>
         </b-col>
-      </b-row> -->
+      </b-row>
 
       <b-row>
         <b-col cols="7" >

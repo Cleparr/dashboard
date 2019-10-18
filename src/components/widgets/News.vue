@@ -1,6 +1,6 @@
 <template>
-  <div v-if="hasImages" rounded alt="Rounded image" class="shadow p-3 mb-2 bg-white rounded">
-    <b-img :src="currentImage.photo"></b-img>
+  <div v-if="hasImages" rounded alt="Rounded image" class="widget-container shadow mb-2 bg-white rounded">
+    <b-img reponsive :src="currentImage.photo"></b-img>
   </div>
 </template>
 
@@ -83,24 +83,14 @@ export default {
 </script>
 
 <style scoped>
-div {
+div.widget-container {
   background-color: blue;
-  height: 1px;
-  overflow: hidden;
+
 }
 
 img {
-  
-  height: 100%;
   width: 100%;
-}
-
-div.img{
-  height: 100%
-}
-
-.p-3 {
-    padding: 0rem !important;
+  height: 56.25%;
 }
 
 .shadow{
