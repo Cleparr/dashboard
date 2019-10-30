@@ -20,7 +20,6 @@
     "save": "^2.4.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
-    "vue-router": "^3.0.3",
     "vue-tweet-embed": "^2.3.0",
     "vue-twitter": "^0.1.0",
     "vue-weather-widget": "^2.1.7",
